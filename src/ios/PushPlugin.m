@@ -53,6 +53,7 @@
     id badgeArg = [options objectForKey:@"badge"];
     id soundArg = [options objectForKey:@"sound"];
     id alertArg = [options objectForKey:@"alert"];
+    id newsstandArg = [options objectForKey:@"newsstand"];
     
     if ([badgeArg isKindOfClass:[NSString class]])
     {
@@ -77,6 +78,15 @@
     }
     else if ([alertArg boolValue])
         notificationTypes |= UIRemoteNotificationTypeAlert;
+
+    if ([newsstandArg isKindOfClass:[NSString class]])
+    {
+        if ([newsstandArg isEqualToString:@"true"])
+            notificationTypes |= UIRemoteNotificationTypeNewsstandContentAvailability;
+    }
+    else if ([newsstandArg boolValue])
+        notificationTypes |= UIRemoteNotificationTypeNewsstandContentAvailability;
+    
     
     self.callback = [options objectForKey:@"ecb"];
 
