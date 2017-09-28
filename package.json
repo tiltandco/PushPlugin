@@ -1,0 +1,18 @@
+{
+  "name": "PushPlugin",
+  "version": "2.5.0",
+  "description": "PushPlugin",
+  "cordova": {
+    "id": "com.phonegap.plugins.PushPlugin",
+    "platforms": [
+      "android",
+      "ios"
+      ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tiltandco/PushPlugin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": ""
